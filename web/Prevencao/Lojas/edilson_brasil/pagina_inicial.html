@@ -1,0 +1,402 @@
+<html>
+    
+    <head>
+        
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        
+        <script type="text/javascript" src='../../../arquivos/js/jquery.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/jmary_menu_jquery.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/mostrarTd_Js.js'></script>
+
+        <link rel="stylesheet" href="../../../arquivos/css/jmarymenudrop.css"/>
+        <link rel="stylesheet" href="../../../arquivos/css/jmary_topo.css"/>
+        <link rel="stylesheet" href="../../../arquivos/css/estrutura.css"/>   
+        
+        <link rel="shortcut icon" href="../../../arquivos/icon/jmol.png">
+        
+        <script type="text/javascript" src='../../../arquivos/js/fonteMaisMenos.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/imprimir_div.js'></script>
+               
+        <style>
+            /* Livros_FÌSICA */
+            .linktipo1:link    { color: #0000FF; }
+            .linktipo1:visited { color: #0000FF; }
+            .linktipo1:active  { color: #0000FF; }
+            .linktipo1:hover   { color: #00CC00; }
+            
+            .mouseencimatxtverde:hover    { color: #00CC00;            }
+            .mouseencimaftm16px:hover     { font-size:16px;            }
+            .mouseencimadecotxtnao:hover  { text-decoration:none;      }
+            .mouseencimadecotxtsim:hover  { text-decoration:underline; }
+            
+            .per { box-shadow: 0px 0px 10px #222; }
+            .per:hover { box-shadow: 10px 10px 10px #422; }
+        </style>
+    </head>
+    
+    <body 
+        style="background-color: #F5F5F5;
+            font:normal 120% verdana,arial,helvetica;
+            width: 100%; height: 100%; padding: 0; margin: 0;">  
+ 
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id_nome_" value="null">
+<!-- input(S) ################################################################# -->   
+
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id_" value="null">
+<!-- input(S) ################################################################# --> 
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### INÍCIO HTML BODY #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+
+
+
+
+
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IMPRIMIR #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="5">      
+<!-- Inicio: Esquerda - Direita - Imprimir - Java --><tbody> <tr>
+        
+        <td style="margin: 0px; padding: 0px">                           
+
+            <!-- <img id="imgindice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px" title="Ocultar Menu" src="https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no" onmouseover="this.src='https://lh5.googleusercontent.com/TzMvRE-mNdRGJ_NDE-WnbVnnsR6GevE0KhgCfaBiru4=w213-h212-p-no'" onmouseout="this.src='https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no'" onclick="mostrarocultar('indice');"> -->
+            <a href="../../../index.html" target="_parent">
+            <img id="img2indice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:15px" title="Ir Para a Página Inicial" 
+                 src="../../../arquivos/imagens/002_menu/casa.png" 
+                 onclick="mostrarocultar('indice');">
+            </a>
+
+            <img width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:20px" title="Imprimir conteúdo abaixo" 
+                 src="../../../arquivos/imagens/002_menu/impressora.png"
+                 onclick="printDiv('corpo');">
+                                 
+            <!-- Fim: Esquerda - Direita - Imprimir - Java -->
+        </td>
+        
+<td style="margin: 0px; padding: 0px">                           
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### TAMANHO DA FONTE INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <table align="right" border="0" cellpadding="2" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <a 
+                        target="_parent" href="../../../index.html"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna4tb').style.display = 'none'; "
+                        >
+                            <img src="../../../arquivos/imagens/003_login/voltar.png" 
+                                style="cursor: pointer; float: left; width:80px; height:30px; "
+                            title="Voltar" >
+                        </a>                                                 
+                    </td>
+                </tr>                   
+            </tbody>
+        </table>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### TAMANHO DA FONTE FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+</td>
+    
+
+
+
+    </tr> 
+
+</tbody></table>    
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IMPRIMIR #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+
+
+
+    
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### CORPO INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+        <div id="corpo">
+                        
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px">      
+                <tr>
+                    <td width="100%" colspan="2" style="margin: 0px; padding: 0px">
+                        <h1 align="center" style="font:bold 210% verdana,arial,helvetica;">Edilson Brasil Soares </h1>
+                    </td>    
+                </tr>
+            </table>  
+            
+            <div style="color: #EF7900; font-weight:bold; margin-top:0px; margin-bottom:10px; margin-left: 20px;"> Prevenção de Perdas </div>
+            <!--  -->
+            <div style="margin-left: 20px; font-size: 14px; font-family: verdana,arial,helvetica;">  
+            <!--  -->    
+                <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" >
+ 
+  
+              
+                    
+                    
+                    
+<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
+                    <!-- INÍCIO -- -->                      
+                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
+                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
+                            <tr>
+                                <td class="per"> 
+                                    
+                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:my_function();window.print();">....</a>     -->
+                                    <a 
+                                        href="javascript:abrir_controle_de_validade();" >
+                                                                                
+                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
+                                             src="../../../admin/prevencao/OO1/controle_de_validade/imagens/0001.png" >
+                                    </a>
+                                </td> 
+                            </tr> 
+                            </table> </div> </li> </ul></div>
+                    </li>
+                    <!-- FIM -- -->   
+<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
+
+
+
+
+
+
+
+
+
+
+
+                 
+                </ul>
+                
+                <p>&nbsp;</p>                 
+            <!--  -->
+            </div>
+            <!--  -->
+        </div>
+        <!--id="corpo"-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### CORPO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+-0
+-1
+-2
+- #### JQUERY INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->  
+<script type="text/javascript">    
+     
+     function abrir_controle_de_validade(){
+         window.location.href = '../../../admin/prevencao/OO1/controle_de_validade/controle_de_validade_0000_01_pagina_inicial.html?' 
+                 + "usuario_logado_id_nome_" + "=" + document.getElementById("usuario_logado_id_nome_").value + "&" 
+                 + "usuario_logado_id_" + "=" + document.getElementById("usuario_logado_id_").value;
+     }
+     
+     function aumentar_imagem( id ){
+         
+         if ( $('#'+id).hasClass("ativo") === true ){
+             
+            $('#'+id).animate({height:"150px",width:"150px"});
+            
+            $('#'+id).removeClass('ativo');
+         }
+         else{
+            
+            $('#'+id).animate({height:"500px",width:"500px"});
+            
+            $('#'+id).addClass('ativo');           
+        }
+     }     
+     
+     
+     function setando_parametros(){
+//INÍCIO - BAIXANDO TABELA PRODUTOS POR EAN  
+    try{
+        
+    //captura a url da página
+    var url = window.location.href; 
+    //alert("URL CAPTURADA: \n\n" + url);
+    
+    //tenta localizar o ?
+    var res = url.split('?');
+    
+    if (res[1] === undefined) {
+        //alert('página sem parâmetros.');
+    }
+    
+    if (res[1] !== undefined) {
+		//tenta localizar os & (pode haver mais de 1)
+        var parametros = res[1].split('&');
+        //alert('Parametros encontrados:\n' + parametros);
+        
+        var ean = "";
+        var qtd = "";
+        var data = "";
+            
+        for( var cont = 0; cont < parametros.length; cont++ ){
+            
+            if( cont === 0 ){
+
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    document.getElementById("usuario_logado_id_nome_").value = valor_do_parametro;    
+                }
+            }                                                        
+            else if( cont === 1 ){
+
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }            
+            else if( cont === 2 ){
+                
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    //document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }            
+            else if( cont === 3 ){
+                
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    //document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }
+        }
+
+    }        
+    }catch(Exception){}
+//FIM - BAIXANDO TABELA PRODUTOS POR EAN           
+     }
+     
+jQuery(document).ready(function(){
+    
+    setTimeout(function(){ setando_parametros(); }, 0);
+
+});
+    
+jQuery(window).resize(function() {
+
+    var browser_width2 = jQuery(window).width();
+
+});
+</script>
+<!-- 
+-0
+-1
+-2
+- #### JQUERY FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+-->
+
+
+
+    </body>
+</html>

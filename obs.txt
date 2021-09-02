@@ -1,0 +1,5 @@
+Controle de Estoque
+    1 - Armazenado e não exposto
+        1.1 - Evitar perda de venda
+        1.2 - Evitar vencimento
+ 
