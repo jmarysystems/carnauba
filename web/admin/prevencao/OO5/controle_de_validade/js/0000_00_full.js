@@ -8,7 +8,7 @@ var var_endereco_planilha_google_produtos = "https://sheets.googleapis.com/v4/sp
 //Planilhas Google ******* NÃO MUDA
 
 //Planilhas Google
-var var_endereco_planilha_google_validade = "https://sheets.googleapis.com/v4/spreadsheets/1OaCbi9njQdx0J5okf8xLQmx9xqj9sBrrFjiLwMc-_mw/values/B:B?key=AIzaSyBwiMCywJRFQHuuksWdhqwjOrR5mDaWJYs";
+var var_endereco_planilha_google_validade = "https://sheets.googleapis.com/v4/spreadsheets/11bOEjD5_nTF1BbM20Ltw2M1qVZCRcX-8wsnZW7Ma9to/values/B:B?key=AIzaSyBwiMCywJRFQHuuksWdhqwjOrR5mDaWJYs";
 //Planilhas Google
 
 //Script Google

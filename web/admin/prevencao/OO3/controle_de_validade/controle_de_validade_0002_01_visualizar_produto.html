@@ -504,7 +504,7 @@ jQuery(window).resize(function() {
                         var id = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() + " - " + 
                              now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + "." + now.getMilliseconds();
                      
-                        var id_formulario_id = "1FAIpQLScagH3FNfZNNquMumx3l6eHjiHJdKwXbY2DN3ZylrDB13xa6g"; 
+                        var id_formulario_id = "1FAIpQLSfivUSjkjfN52X_zIC1I__VcxZEOdRfFRQ_cYv54O4dZqIe7A"; 
           
                         var id_parametro_1_form_txt                = "833181104"; 
                         var id_parametro_2_form_ESTABELECIMENTO    = "1076878183";
@@ -577,15 +577,14 @@ jQuery(window).resize(function() {
                             "&entry." + id_parametro_11_form_VALOR_TOTAL       + "=" + valor_total;
                     
                         try{
-                           
-                            /*                        
+                                                                         
                             $.post( GET_URL,
                                 function(data, status){
                                     alert("Data: " + data + "\nStatus: " + status);
                                 }
                             );
-                            */
-                           
+                                                       
+                           /*
                             var GET_URL22 = var_endereco_script_google_produtos +
                                 "?parametro_1" + "=" + dados_todos_nao_cripto + 
                                 "&parametro_2" + "=" + estabelecimento_selected + 
@@ -601,14 +600,14 @@ jQuery(window).resize(function() {
                                 "&parametro_11" + "=" + valor_total;  
                            
                                 window.open( GET_URL22, '_blank');
-                            
+                            */
                             
                             alert("Produto - " + ean + " - " + "Adicionado com sucesso!" );
-                            //window.open('controle_de_validade_0001_01_adicionar_produto.html?' + "usuario_logado" + "=" + usuario_logado_nome.trim(), '_parent');
+                            //* //* //window.open('controle_de_validade_0001_01_adicionar_produto.html?' + "usuario_logado" + "=" + usuario_logado_nome.trim(), '_parent');
                             
                             window.location.href = 'controle_de_validade_0000_01_pagina_inicial.html?' + "usuario_logado" + "=" + usuario_logado_nome.trim();
 
-                        }catch(Exception){alert( " Exception - " + Exception );}          
+                        }catch(Exception){alert( " Exception - " + Exception );}           
                                             
                     }, 0);
                                         
