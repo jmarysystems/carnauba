@@ -33,11 +33,11 @@
 
 
 <!-- input(S) ################################################################# -->         
-        <input type="hidden" id="usuario_logado_id_nome_" value="null">
+        <input type="hidden" id="usuario_logado_id_nome" value="null">
 <!-- input(S) ################################################################# -->   
 
 <!-- input(S) ################################################################# -->         
-        <input type="hidden" id="usuario_logado_id_" value="null">
+        <input type="hidden" id="usuario_logado_id" value="null">
 <!-- input(S) ################################################################# --> 
 
 <!-- input(S) ################################################################# --> 
@@ -181,7 +181,7 @@
             onclick="
                 window.location.href = 
                     'controle_de_validade_0000_01_pagina_inicial.html'  + '?' + 
-                    'nome_do_usuario' + '=' + document.getElementById('usuario_logado_id_nome_').value;"
+                    'usuario_logado_id_nome' + '=' + document.getElementById('usuario_logado_id_nome').value;"
                         
             title="Voltar" >
         
@@ -322,7 +322,7 @@
             style="cursor: pointer; padding-top: 1px;"
             
                     onclick="adicionar_produto(
-                        document.getElementById ('usuario_logado_id_nome_').value,        
+                        document.getElementById ('usuario_logado_id_nome').value,        
                         document.getElementById ('ean_manual').value,
                         document.getElementById ('qtd_ean').value,
                         document.getElementById ('data_ean').value,
@@ -379,14 +379,16 @@
                 if( $.isNumeric( n11 ) === true ){
                     
                     if( $.isNumeric( n22 ) === true ){
+
+                        var nff = n11 * n22;
+                        //var nf = nff.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                        var nf = nff.toFixed(2);
+                        var nf2 = nf.replace(".", ",");
                                                                         
-                        var n1 = 0; n1 = parseFloat( n11, 10);        
-                        var n2 = 0; n2 = parseFloat( n22, 10); 
-                        
                         document.getElementById('qtd_ean').value = n11;
                         document.getElementById('valor_und_ean').value = n22;
                         
-                        document.getElementById('valor_total_ean').innerHTML = n1 * n2;
+                        document.getElementById('valor_total_ean').innerHTML = nf2;
                     }
                     else{
                         
@@ -449,7 +451,8 @@
                     var nome_do_parametro = dados[0];
                     var valor_do_parametro = dados[1];
                     
-                    document.getElementById("usuario_logado_id_nome_").value = valor_do_parametro;    
+                    document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;   
+                    //alert( "usuario_logado_id_nome - " + valor_do_parametro );
                 }
             }                                                        
             else if( cont === 1 ){
@@ -460,11 +463,15 @@
                     var nome_do_parametro = dados[0];
                     var valor_do_parametro = dados[1];
                     
-                    document.getElementById("usuario_logado_id_").value = valor_do_parametro;    
+                    document.getElementById("usuario_logado_id").value = valor_do_parametro; 
+                    //alert( "usuario_logado_id - " + valor_do_parametro );
                 }
             }
         }
-    }        
+    }       
+    
+        funcaosomar();
+    
     }catch(Exception){}
 //FIM - BAIXANDO TABELA PRODUTOS POR EAN           
      }

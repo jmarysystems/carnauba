@@ -6,20 +6,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         
-        <script type="text/javascript" src='js/0000_00_full.js'></script>
-        
-        <script type="text/javascript" src='../../../../arquivos/js/jquery.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/jmary_menu_jquery.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/mostrarTd_Js.js'></script>
+        <script type="text/javascript" src='../../arquivos/js/jquery.js'></script>
+        <script type="text/javascript" src='../../arquivos/js/jmary_menu_jquery.js'></script>
+        <script type="text/javascript" src='../../arquivos/js/mostrarTd_Js.js'></script>
 
-        <link rel="stylesheet" href="../../../../arquivos/css/jmarymenudrop.css"/>
-        <link rel="stylesheet" href="../../../../arquivos/css/jmary_topo.css"/>
-        <link rel="stylesheet" href="../../../../arquivos/css/estrutura.css"/>   
+        <link rel="stylesheet" href="../../arquivos/css/jmarymenudrop.css"/>
+        <link rel="stylesheet" href="../../arquivos/css/jmary_topo.css"/>
+        <link rel="stylesheet" href="../../arquivos/css/estrutura.css"/>   
         
-        <link rel="shortcut icon" href="../../../../arquivos/icon/jmol.png">
+        <link rel="shortcut icon" href="../../arquivos/icon/jmol.png">
         
-        <script type="text/javascript" src='../../../../arquivos/js/fonteMaisMenos.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/imprimir_div.js'></script>
+        <script type="text/javascript" src='../../arquivos/js/fonteMaisMenos.js'></script>
+        <script type="text/javascript" src='../../arquivos/js/imprimir_div.js'></script>
                
         <style>
             /* Livros_FÌSICA */
@@ -45,11 +43,11 @@
  
         
 <!-- input(S) ################################################################# -->         
-        <input type="hidden" id="usuario_logado_id_nome" value="null">
+        <input type="hidden" id="usuario_logado_id_nome_" value="null">
 <!-- input(S) ################################################################# -->   
 
 <!-- input(S) ################################################################# -->         
-        <input type="hidden" id="usuario_logado_id" value="null">
+        <input type="hidden" id="usuario_logado_id_" value="null">
 <!-- input(S) ################################################################# --> 
 
 
@@ -89,14 +87,14 @@
         <td style="margin: 0px; padding: 0px">                           
 
             <!-- <img id="imgindice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px" title="Ocultar Menu" src="https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no" onmouseover="this.src='https://lh5.googleusercontent.com/TzMvRE-mNdRGJ_NDE-WnbVnnsR6GevE0KhgCfaBiru4=w213-h212-p-no'" onmouseout="this.src='https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no'" onclick="mostrarocultar('indice');"> -->
-            <a href="../../../../index.html" target="_parent">
+            <a href="../../index.html" target="_parent">
             <img id="img2indice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:15px" title="Ir Para a Página Inicial" 
-                 src="../../../../arquivos/imagens/002_menu/casa.png" 
+                 src="../../arquivos/imagens/002_menu/casa.png" 
                  onclick="mostrarocultar('indice');">
             </a>
 
             <img width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:20px" title="Imprimir conteúdo abaixo" 
-                 src="../../../../arquivos/imagens/002_menu/impressora.png"
+                 src="../../arquivos/imagens/002_menu/impressora.png"
                  onclick="printDiv('corpo');">
                                  
             <!-- Fim: Esquerda - Direita - Imprimir - Java -->
@@ -118,20 +116,20 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="../../../../arquivos/imagens/003_login/voltar.png" 
-                            style="cursor: pointer; float: right; width:80px; height:30px; "
-            
-                            onclick="
-                                window.location.href = 
-                                '../../../../Area/Lojas/aldeota/pagina_inicial.html'  + '?' + 
-                                'usuario_logado_id_nome' + '=' + document.getElementById('usuario_logado_id_nome').value
-                                + '?' + 'usuario_logado_id' + '=' + document.getElementById('usuario_logado_id').value;"
-                        
-                        title="Voltar" > 
+                        <a href="#" onclick="javascript:tamanhofonte('mais',  'corpo' );"> 
+                            <img src="../../arquivos/imagens/002_menu/FonteAum.png" title="Aumentar Fonte" width="23" height="23"></a>&nbsp;
+                    </td>
+                    <td>
+                        <a href="#" onclick="javascript:tamanhofonte('padrao', 'corpo');"> 
+                            <img src="../../arquivos/imagens/002_menu/FontePadrao.png" title="Fonte Padrão" width="23" height="23"></a>&nbsp;
+                    </td>
+                    <td>
+                        <a href="#" onclick="javascript:tamanhofonte('menos',  'corpo');"> 
+                            <img src="../../arquivos/imagens/002_menu/FonteDim.png" title="Diminuir Fonte" width="23" height="23"></a>
                     </td>
                 </tr>                   
             </tbody>
-    </table>
+        </table>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 -0
@@ -186,7 +184,7 @@
             <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px">      
                 <tr>
                     <td width="100%" colspan="2" style="margin: 0px; padding: 0px">
-                        <h1 align="center" style="font:bold 210% verdana,arial,helvetica;">Controle de Validade Loja 07</h1>
+                        <h1 align="center" style="font:bold 210% verdana,arial,helvetica;">Controle de Estoque - Relatórios </h1>
                     </td>    
                 </tr>
             </table>  
@@ -197,40 +195,14 @@
             <!--  -->    
                 <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" >
  
-    
+
+
+
+
+
+
                     
                     
-
-                    
-                    
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:my_function();window.print();">....</a>     -->
-                                    <a 
-                                        href="javascript:abrir_controle_de_validade_adicionar_produto();" >
-                                                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="imagens/0006.png" > 
-                                    </a>
-                                                                        
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
 
 
 <!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
@@ -240,83 +212,23 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:my_function();window.print();">....</a>     -->
-                                    <a 
-                                        href="javascript:abrir_controle_de_validade_lista_de_produtos_com_imagens();" >
-                                                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="imagens/0005.png" > 
-                                    </a>
-
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:my_function();window.print();">....</a>     -->
-                                    <a 
-                                        href="javascript:abrir_controle_de_validade_lista_de_produtos_na_tabela();" >
-                                                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="imagens/0004.png" > 
-                                    </a>
-
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
+                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:abrir_controle_de_validade_lista_de_produtos_na_tabela();" >....</a>     -->
                                     <a 
                                         target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1iA5s7dQFJ_ZB4nMrVyoL0ho5v7lZpQToKB5SRbGLCzU/edit?usp=sharing" >                                                
+                                        href="https://datastudio.google.com/reporting/274f7fc1-fe48-4e2e-95fb-54452b71669c" >                                                
                                         <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="imagens/0002.png" > 
+                                             src="controle_de_validade/0001.png" > 
                                     </a>
+
                                 </td> 
                             </tr> 
                             </table> </div> </li> </ul></div>
                     </li>
                     <!-- FIM -- -->   
 <!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
+
+
+
 
 
 
@@ -368,22 +280,21 @@
 <script type="text/javascript">    
      
      function abrir_controle_de_validade_adicionar_produto(){
-         window.location.href = 
-                'controle_de_validade_0001_01_adicionar_produto.html?' 
-                + "usuario_logado_id_nome" + "=" + document.getElementById("usuario_logado_id_nome").value + "&" 
-                + "usuario_logado_id" + "=" + document.getElementById("usuario_logado_id").value;
+         window.location.href = '../../login_web_0001/controle_de_validade/controle_de_validade_0001_01_adicionar_produto.html?' 
+                 + "usuario_logado_id_nome_" + "=" + document.getElementById("usuario_logado_id_nome_").value + "&" 
+                 + "usuario_logado_id_" + "=" + document.getElementById("usuario_logado_id_").value;
      }
      
      function abrir_controle_de_validade_lista_de_produtos_com_imagens(){
-         window.location.href = 'controle_de_validade_0003_01_visualizar_lista_de_produtos_com_imagens.html?' 
-                 + "usuario_logado_id_nome" + "=" + document.getElementById("usuario_logado_id_nome").value + "&" 
-                 + "usuario_logado_id" + "=" + document.getElementById("usuario_logado_id").value;
+         window.location.href = '../../login_web_0001/controle_de_validade/../../login_web_0001/controle_de_validade/controle_de_validade_0003_01_visualizar_lista_de_produtos_com_imagens.html?' 
+                 + "usuario_logado_id_nome_" + "=" + document.getElementById("usuario_logado_id_nome_").value + "&" 
+                 + "usuario_logado_id_" + "=" + document.getElementById("usuario_logado_id_").value;
      }
      
      function abrir_controle_de_validade_lista_de_produtos_na_tabela(){
-         window.location.href = 'controle_de_validade_0003_02_visualizar_lista_de_produtos_na_tabela.html?' 
-                 + "usuario_logado_id_nome" + "=" + document.getElementById("usuario_logado_id_nome").value + "&" 
-                 + "usuario_logado_id" + "=" + document.getElementById("usuario_logado_id").value;
+         window.location.href = '../../login_web_0001/controle_de_validade/controle_de_validade_0003_02_visualizar_lista_de_produtos_na_tabela.html?' 
+                 + "usuario_logado_id_nome_" + "=" + document.getElementById("usuario_logado_id_nome_").value + "&" 
+                 + "usuario_logado_id_" + "=" + document.getElementById("usuario_logado_id_").value;
      }
      
      
@@ -438,7 +349,7 @@
                     var nome_do_parametro = dados[0];
                     var valor_do_parametro = dados[1];
                     
-                    document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;    
+                    document.getElementById("usuario_logado_id_nome_").value = valor_do_parametro;    
                 }
             }                                                        
             else if( cont === 1 ){
@@ -449,7 +360,7 @@
                     var nome_do_parametro = dados[0];
                     var valor_do_parametro = dados[1];
                     
-                    document.getElementById("usuario_logado_id").value = valor_do_parametro;  
+                    document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
                 }
             }            
             else if( cont === 2 ){

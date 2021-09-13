@@ -32,7 +32,11 @@
         
 <!-- input(S) ################################################################# -->         
         <input type="hidden" id="usuario_logado_id_nome" value="null">
-<!-- input(S) ################################################################# -->   
+<!-- input(S) ################################################################# -->  
+
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id" value="null">
+<!-- input(S) ################################################################# --> 
 
 <!-- input(S) ################################################################# -->         
         <input type="hidden" id="usuario_logado_autorizacao" value="null">
@@ -198,7 +202,7 @@
             onclick="
                 window.location.href = 
                     'controle_de_validade_0001_01_adicionar_produto.html'  + '?' + 
-                    'nome_do_usuario' + '=' + document.getElementById('usuario_logado_id_nome').value;"
+                    'usuario_logado_id_nome' + '=' + document.getElementById('usuario_logado_id_nome').value;"
                         
             title="Voltar" >
 

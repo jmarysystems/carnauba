@@ -41,8 +41,8 @@
 <!-- input(S) ################################################################# -->   
 
 <!-- input(S) ################################################################# -->         
-        <input type="hidden" id="usuario_logado_id_" value="null">
-<!-- input(S) ################################################################# -->     
+        <input type="hidden" id="usuario_logado_id" value="null">
+<!-- input(S) ################################################################# -->    
         
     <input type="hidden" id="tabela_de_produtos_proximos_do_vencimento_xls" value="null">
     
@@ -207,7 +207,7 @@
             onclick="
                 window.location.href = 
                     'controle_de_validade_0000_01_pagina_inicial.html'  + '?' + 
-                    'nome_do_usuario' + '=' + document.getElementById('usuario_logado_id_nome').value;"
+                    'usuario_logado_id_nome' + '=' + document.getElementById('usuario_logado_id_nome').value;"
                         
             title="Voltar" >
     </li> 
@@ -405,8 +405,20 @@ function setando_parametros(){
             var parametros = res[1].split('&');
             //alert('Parametros encontrados:\n' + parametros);
         
-            for( var cont = 0; cont < parametros.length; cont++ ){                  
-                if( cont === 1 ){
+            for( var cont = 0; cont < parametros.length; cont++ ){    
+                if( cont === 0 ){
+                    
+                    if( parametros[cont] !== undefined ){
+                
+                        var dados = parametros[cont].split('=');              
+                        var nome_do_parametro = dados[0];
+                        var valor_do_parametro = dados[1];
+                    
+                        document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;   
+                        //alert( "usuario_logado_id_nome - " + valor_do_parametro );
+                    }
+                }
+                else if( cont === 1 ){
 
                     if( parametros[cont] !== undefined ){
                 
@@ -452,7 +464,7 @@ function recebendo_e_tratando_parametros( nome_do_parametro, valor_do_parametro 
          
          //alert('\nnome_do_parametro: ' + nome_do_parametro + '\nvalor_do_parametro: ' + valor_do_parametro );
          
-         document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;     
+         //document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;     
          
     }catch(Exception){}
 }

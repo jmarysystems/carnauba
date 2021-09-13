@@ -32,7 +32,11 @@
         
 <!-- input(S) ################################################################# -->         
         <input type="hidden" id="usuario_logado_id_nome" value="null">
-<!-- input(S) ################################################################# -->   
+<!-- input(S) ################################################################# --> 
+
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id" value="null">
+<!-- input(S) ################################################################# --> 
 
 <!-- input(S) ################################################################# -->         
         <input type="hidden" id="usuario_logado_autorizacao" value="null">
@@ -198,7 +202,7 @@
             onclick="
                 window.location.href = 
                     'controle_de_validade_0001_01_adicionar_produto.html'  + '?' + 
-                    'nome_do_usuario' + '=' + document.getElementById('usuario_logado_id_nome').value;"
+                    'usuario_logado_id_nome' + '=' + document.getElementById('usuario_logado_id_nome').value;"
                         
             title="Voltar" >
 
@@ -336,7 +340,8 @@
                     var nome_do_parametro = dados[0];
                     var valor_do_parametro = dados[1];
                     
-                    document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;    
+                    document.getElementById("usuario_logado_id_nome").value = valor_do_parametro;   
+                    //alert( "usuario_logado_id_nome - " + valor_do_parametro );
                 }
             }                                                        
             else if( cont === 1 ){
@@ -480,7 +485,7 @@ jQuery(window).resize(function() {
                 var data_1 = material_rec_fora.trim();
                 var data_2 = data_1.replace("*", '');
                 var material_rec = data_2.replace("%", '');
-                
+                                
                 //alert( document.getElementById("usuario_logado_id_nome").value );
                 var usuario_logado_nome = document.getElementById("usuario_logado_id_nome").value;
                 
@@ -517,6 +522,9 @@ jQuery(window).resize(function() {
                         
                         var id_parametro_10_form_VALOR_UND         = "264729293";
                         var id_parametro_11_form_VALOR_TOTAL       = "1479274595";
+                        
+                        var id_parametro_12_form_DIAS                = "1087742260";
+                        var id_parametro_13_form_DIAS_ATE_VENCIMENTO = "1590227190";
                      
                         //////////////////////////////////////////
                         var dados_parametro_1_cripto_id           = exportar_Para_Alfabeto_JM_Sem_Arroba( id.trim() ); 
@@ -560,7 +568,13 @@ jQuery(window).resize(function() {
                             valor_total +
                             "日";
                         //////////////////////////////////////////
-                
+                        
+                        var datafinal1 = '=' + "DAYS( \"" + data + "\"; TODAY() )";
+                        var datafinal2 = datafinal1.replace("'", '');
+                        
+                        var diasvenfinal1 = '=' + "IF( DAYS( \"" + data + "\"; TODAY() )<0;\"VENCIDO\"; IF( DAYS( \"" + data + "\"; TODAY() )>10; \"A VENCER\" ; \" PROX. VENCIMENTO\") )";
+                        var diasvenfinal2 = diasvenfinal1.replace("'", '');
+                        
                         var GET_URL = "https://docs.google.com/forms/d/e/" + id_formulario_id + "/formResponse" +
                             "?entry." + id_parametro_1_form_txt                + "=" + dados_todos_nao_cripto + 
                             "&entry." + id_parametro_2_form_ESTABELECIMENTO    + "=" + estabelecimento_selected + 
@@ -573,7 +587,10 @@ jQuery(window).resize(function() {
                             "&entry." + id_parametro_9_form_CATEGORIA          + "=" + cat + 
                             
                             "&entry." + id_parametro_10_form_VALOR_UND         + "=" + valor_und + 
-                            "&entry." + id_parametro_11_form_VALOR_TOTAL       + "=" + valor_total;
+                            "&entry." + id_parametro_11_form_VALOR_TOTAL       + "=" + valor_total +
+                    
+                            "&entry." + id_parametro_12_form_DIAS              + "=" + datafinal2 + 
+                            "&entry." + id_parametro_13_form_DIAS_ATE_VENCIMENTO  + "=" + diasvenfinal2;
                     
                         try{
                                                                          

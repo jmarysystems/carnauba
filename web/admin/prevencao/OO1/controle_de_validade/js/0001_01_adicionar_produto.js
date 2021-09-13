@@ -27,10 +27,10 @@ function adicionar_produto( usuario_logado_nome, ean, quantidade, dataR, valor_u
             
             alert("Para adicionar um produto\n01 informe no Valor Unidade\n02 Apenas números.");
         }
-        else if( $.isNumeric( valor_total.trim() ) === false ){
+        //else if( $.isNumeric( valor_total.trim() ) === false ){
             
-            alert("Para adicionar um produto\n01 informe no Valor Total\n02 Apenas números.");
-        }
+        //    alert("Para adicionar um produto\n01 informe no Valor Total\n02 Apenas números.");
+        //}
         else if( data.trim().length !== 10 ){
             
             alert("Data Inválida!\n01 informe uma data válida.\n02 DD/MM/AAAA.");
@@ -63,7 +63,7 @@ function adicionar_produto( usuario_logado_nome, ean, quantidade, dataR, valor_u
                     if ( mes > 0 && mes < 13 ){
                         
                         if ( dia > 0 && dia < 32 ){
-                
+                                                        
                             finalizar( usuario_logado_nome, ean, quantidade, data, valor_und, valor_total );
                         }
                         else{
@@ -105,7 +105,20 @@ function finalizar( usuario_logado_nome, ean, quantidade, data, _valor_und33, _v
     
     try{
         
-        var _valor_und = _valor_und33;
+        /***********************************/
+        var nfff = _valor_und33 * 1;
+        var nff = nfff.toFixed(2);
+        var _valor_und = nff.replace(".", ",");
+        /***********************************/
+        
+        /***********************************/
+        //var nfff2 = quantidade * 1;
+        //var nff2 = nfff2.toFixed(2);
+        //var nf = nff.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        //var quantidade_x = nff2.replace(".", ",");
+        /***********************************/
+        
+        //var _valor_und = _valor_und33;
         var _valor_total = _valor_total33;
         
         //setTimeout(function(){ 
@@ -114,7 +127,7 @@ function finalizar( usuario_logado_nome, ean, quantidade, data, _valor_und33, _v
                         'controle_de_validade_0002_01_visualizar_produto.html?' + 
                         "usuario_logado" + "=" + usuario_logado_nome.trim() + "&" + 
                         "ean" + "=" + ean.trim() + "&" + 
-                        "quantidade" + "=" + quantidade.trim() + "&" + 
+                        "quantidade" + "=" + quantidade + "&" + 
                         "data" + "=" + data.trim() + "&" + 
                         "valor_und" + "=" + _valor_und + "&" + 
                         "valor_total" + "=" + _valor_total;
@@ -123,7 +136,7 @@ function finalizar( usuario_logado_nome, ean, quantidade, data, _valor_und33, _v
                         'controle_de_validade_0002_01_visualizar_produto.html?' + 
                         "usuario_logado" + "=" + usuario_logado_nome.trim() + "&" + 
                         "ean" + "=" + ean.trim() + "&" + 
-                        "quantidade" + "=" + quantidade.trim() + "&" + 
+                        "quantidade" + "=" + quantidade + "&" + 
                         "data" + "=" + data.trim() + "&" + 
                         "valor_und" + "=" + _valor_und + "&" + 
                         "valor_total" + "=" + _valor_total
